@@ -1,0 +1,29 @@
+<div class="big-container">
+  <h2 class="category">DriverTrains</h2>
+  <div class="container">
+
+    <section style="float: left; display: inline;">
+      <br>
+      <table>
+        <thead>
+        <th>ID</th>
+        <th>DriverID</th>
+        <th>TrainID</th>
+        <th>HowManyDays</th>
+        <th> </th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let driverTrain of driverTrains">
+          <td>{{driverTrain.id}}</td>
+          <td>{{driverTrain.driver.id}}</td>
+          <td>{{driverTrain.train.id}}</td>
+          <td>{{driverTrain.howManyDays}}</td>
+          <td>
+            <button type='button' (click)="onDelete(driverTrain.id)">Delete</button></td>
+        </tr>
+        </tbody>
+      </table>
+      <br>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="big-container">
+  <h2 class="category">Routes</h2>
+  <div class="container">
+
+    <section style="float: left; display: inline;">
+      <br>
+      <table>
+        <thead>
+        <th>ID</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th> </th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let route of routes">
+          <td>{{route.id}}</td>
+          <td>{{route.source}}</td>
+          <td>{{route.destination}}</td>
+          <td>
+            <button type='button' (click)="onDelete(route.id)">Delete</button></td>
+        </tr>
+        </tbody>
+      </table>
+      <br>
+    </section>
+  </div>
+</div>
+

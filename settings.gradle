@@ -1,0 +1,4 @@
+rootProject.name = 'lab10x-pauladam2001'
+include 'core'
+include 'web'
+include 'client'

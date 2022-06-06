@@ -1,0 +1,37 @@
+.big-container {
+  padding-top: 60px;
+  padding-left: 20%;
+  align-items: center;
+}
+
+.container {
+  background: gray;
+  float: left;
+  display: inline;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.category{
+  padding-left: 15em;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  margin: 2px;
+  padding: 5px;
+  display: inline-block;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+button:hover {
+  color: darkgray;
+  background-color: #87878b;
+  cursor: pointer;
+}

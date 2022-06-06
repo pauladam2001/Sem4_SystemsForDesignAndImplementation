@@ -1,0 +1,49 @@
+<div class="big-container">
+  <h2 class="category">Trains</h2>
+  <div class="container">
+
+    <section style="float: left; display: inline;">
+      <br>
+      <table>
+        <thead>
+        <th>ID</th>
+        <th>Arrival</th>
+        <th>Departure</th>
+        <th>Route ID</th>
+        <th>Route Source</th>
+        <th>Route Destination</th>
+        <th> </th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let train of trains">
+          <td>{{train.id}}</td>
+          <td>{{train.arrivalTime}}</td>
+          <td>{{train.departureTime}}</td>
+          <td>{{train.route.id}}</td>
+          <td>{{train.route.source}}</td>
+          <td>{{train.route.destination}}</td>
+          <td>
+            <button type='button' (click)="onDelete(train.id)">Delete</button></td>
+        </tr>
+        </tbody>
+      </table>
+      <br>
+    </section>
+
+    <section id="filter_form" style="float: left; display: block; padding-left: 50px; padding-top: 25px">
+      <form>
+        <input id="source" type="text" #filterSource placeholder="Source" style="margin: 5px; width: 191px">
+        Source<br>
+        <button (click)="filterTrains(filterSource)">
+          Filter trains by source</button>
+        <button (click)="getTrains()">
+          Refresh</button>
+      </form>
+    </section>
+
+    <div style="float: left; display: block; padding-left: 50px; padding-top: 25px">
+      <button (click)="sortTrains()">Sort trains by departure</button>
+    </div>
+  </div>
+</div>
+

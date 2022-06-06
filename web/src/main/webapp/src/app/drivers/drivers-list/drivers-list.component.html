@@ -1,0 +1,30 @@
+<div class="big-container">
+<h2 class="category">Drivers</h2>
+<div class="container">
+
+  <section style="float: left; display: inline;">
+    <br>
+    <table>
+      <thead>
+      <th>ID</th>
+      <th>CNP</th>
+      <th>Name</th>
+      <th> </th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let driver of drivers">
+        <td>{{driver.id}}</td>
+        <td>{{driver.cnp}}</td>
+        <td>{{driver.name}}</td>
+        <td>
+          <button type='button' (click)="onDelete(driver.id)">Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+    <br>
+  </section>
+  <div>
+    <button (click)="redirectToAdd()">Add a new driver</button>
+  </div>
+</div>
+</div>
